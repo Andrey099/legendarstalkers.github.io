@@ -1,0 +1,613 @@
+body {
+  font-family: 'Roboto', Tahoma, Arial;
+  font-size: 12px;
+  max-width: 375px;
+  margin: 10px auto;
+  background: #000 url(images/background.png) no-repeat center top;
+}
+
+strong,
+b {
+  letter-spacing: 1px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-top: -2px;
+  border: none;
+  outline: 0;
+}
+
+a {
+  color: #a25e4b;
+  text-decoration: none;
+}
+
+a.button {
+  background: url(start/bleft.png) right center no-repeat, url(start/bright.png) left center no-repeat, url(start/bcenter.png) center repeat-x;
+  display: block;
+  color: #a25e4b;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 13px 15px;
+  margin: 3px 5px;
+}
+a.button:hover,
+a.button:active {
+  background: url(start/hbleft.png) right center no-repeat, url(start/hbright.png) left center no-repeat, url(start/hbcenter.png) center repeat-x;
+}
+
+hr {
+  border: none;
+  margin: 0;
+  margin: 4px 0;
+  border-bottom: 1px solid #252d34;
+}
+
+.margin {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.margin-left-right {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.no-margin {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.nmfull {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.background-block {
+  min-height: 120px;
+  background-position: center;
+  position: relative;
+  margin: 0 5px;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.name {
+  padding: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #2f3a43;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+.info {
+  color: #ddd;
+  margin: 5px;
+  font-size: 12px;
+}
+
+.line {
+  background: url(start/line.gif);
+  min-height: 4px;
+  margin: 0 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.small {
+  font-size: 10px;
+}
+
+.header {
+  background: url(start/c9.png) border-box;
+  border-radius: 4px;
+  color: #ccc;
+  padding: 4px 6px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  margin: 5px;
+}
+
+.content {
+  background: url(start/c1.png) no-repeat scroll left top border-box, url(start/c2.png) no-repeat scroll right top border-box,url(start/c3.png) no-repeat scroll left bottom border-box,url(start/c4.png) no-repeat scroll right bottom border-box,url(start/c5.png) repeat-x scroll right top border-box,url(start/c6.png) repeat-y scroll left top border-box,url(start/c7.png) repeat-y scroll right top border-box,url(start/c8.png) repeat-x scroll left bottom border-box,url(start/c9.png) left top repeat padding-box;
+  padding: 10px;
+}
+
+.copy {
+  padding-top: 5px;
+  font-size: 10px;
+  text-align: center;
+  color: #ccc;
+}
+
+input,
+textarea,
+select {
+  font-family: 'Roboto', Tahoma, Arial;
+  font-size: 12px;
+  max-width: 100%;
+}
+
+input[type="file"] {
+  padding: 5px;
+  display: block;
+  width: 100%;
+  border: 1px solid #512F26;
+}
+
+option {color: #000;}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  background: transparent;
+  padding: 5px;
+  border: none;
+  border: 1px solid #512F26;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: #B57E6F;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: #252e35 url(images/hazard.png) no-repeat center left;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #20282e;
+  cursor: pointer;
+  outline: 0;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  outline: 0;
+}
+
+form,
+h1 {
+  margin: 0 !important;
+}
+
+.access-user a,
+.access-user {
+  font-weight: normal;
+}
+
+.access-dev a,
+.access-dev {
+  color: #ffa200 !important;
+  font-weight: normal;
+}
+
+.access-adm a,
+.access-adm {
+  color: #ff0000 !important;
+  font-weight: normal;
+}
+
+.access-mod a,
+.access-mod {
+  color: #3498db !important;
+  font-weight: normal;
+}
+
+.ladder {
+  margin: 2px 5px;
+  border: 1px solid #31333a;
+}
+
+.ladder h1 {
+  color: #ffa200;
+  font-size: 12px;
+}
+
+.out {
+  margin: 2px 4px;
+}
+
+.fights {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #31333a;
+}
+
+.fights-list {
+  margin: 2px;
+  padding: 4px;
+  border: 1px solid #31333a;
+}
+.fights-list strong {
+  color: #ffa200;
+}
+
+.fights-location {
+  border: 1px solid #ccc;
+  color: #ccc;
+  padding: 2px 5px;
+  margin-top: -2px;
+}
+
+.fights-award {
+  display: inline-block;
+  border: 1px solid #ffa200;
+  padding: 2px 4px;
+  color: #ffa200;
+  font-size: 11px;
+  margin: 4px 2px 0 0;
+}
+
+.fights-link {
+  border: 1px solid #31333a;
+}
+
+.fights-orange-link {
+  border: 1px solid #ffa200 !important;
+}
+.fights-orange-link a {
+  color: #ffa200 !important;
+}
+
+.fights-link a {
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  color: #747987;
+}
+
+a.fights-a {
+  display: block;
+  border: 1px solid #31333a;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  color: #747987;
+  margin-top: 5px;
+}
+
+.fights-link a:hover,
+.fights-link a:active,
+a.fights-a:hover,
+a.fights-a:active {
+  background: #31333a;
+  color: #ccc;
+}
+
+.fights-about {
+  color: #747987;
+  font-size: 11px;
+}
+
+.fights b {
+  letter-spacing: 1.1px;
+  font-size: 13px;
+  color: #ff0000;
+}
+
+.fights i {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.attack-icon {
+  background: #222a30;
+  color: #ffa200;
+  padding: 8px;
+  border-radius: 2px;
+}
+.attack-text {
+  color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.attack-text small {
+  font-size: 11px;
+  color: #999;
+}
+
+.artifact,
+a.weapon,
+a.sms {
+  display: block;
+  background: #2f3a43;
+  padding: 5px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+a.weapon:hover,
+a.weapon:active,
+a.weapon:focus,
+a.sms:hover,
+a.sms:active,
+a.sms:focus {
+  background-color: #2a343c;
+  cursor: pointer;
+  outline: 0;
+}
+
+a.sms .sms-name {
+  color: #fff;
+  margin-bottom: 2px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+a.sms .sms-message {
+  color: #ccc;
+  font-size: 10px;
+}
+
+a.sms .sms-message.new {
+  background: #222a30;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.dialog {
+  margin: 2px 5px;
+  padding: 3px 7px;
+  border: 1px solid #31333a;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  color: #ccc;
+}
+
+h1 {
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+h1.human {color: #ffa200;}
+h1.you {color: #0096ff;}
+h1.enemy {color: #ff0000;}
+h1.pda {color: #fff;}
+h1.chat {color: #ccc;}
+
+.dialog p {
+  margin: 2px 10px;
+  color: #747987;
+}
+
+.dialog-p {
+  margin: 2px 10px;
+  color: #747987;
+}
+
+.about {
+  color: #747987;
+  border-left: 2px solid #ffc600;
+  padding: 2px 5px;
+  margin: 5px 0;
+  color: #ffc600;
+}
+
+.list {
+  border-left: 2px solid #999;
+  padding: 0 7px;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.list hr {
+  margin: 2px 0;
+  border-bottom: 1px solid #31333a;
+}
+
+.callout {
+  border: 1px solid #a25e4b;
+  color: #999;
+  padding: 5px 7px;
+  margin: 2px 5px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.title {
+  background: url(images/title.png) repeat-x center;
+  padding: 8px 10px;
+  color: #fff;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+}
+
+/* zone */
+.zone {
+  padding: 5px 7px;
+  margin: 0 5px 2px 5px;
+  border: 1px solid #2f3a43;
+  color: #fff;
+}
+
+.zone-title {
+  padding: 5px 3px 5px 7px;
+  margin: 0 5px;
+  border: 1px solid #2f3a43;
+  border-bottom: 0;
+  color: #fff;
+  display: inline-block;
+}
+
+.outline {
+  padding: 2px;
+  margin: 5px;
+  border: 1px solid #2f3a43;
+  color: #fff;
+}
+
+.col {
+  background: url(images/hazard.png) left center no-repeat #2f3a43;
+  padding: 5px;
+  color: #fff;
+  margin: 2px;
+  text-align: center;
+}
+
+.cl-foot {
+  color: #fff;
+  margin: 2px 2px;
+}
+
+.cl {
+  color: #fff;
+  margin: 5px;
+}
+
+.quest-grey {
+  border: 1px solid #999;
+  height: 5px;
+  margin: 0 1px;
+}
+
+.quest-green {
+  border: 1px solid #ffa200;
+  background: #ffa200;
+  height: 5px;
+  margin: 0 1px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.quest-btn a {
+  padding: 5px 10px;
+  margin: 0 1px;
+  display: block;
+  border: 1px solid #ffa200;
+  color: #ffa200;
+  height: auto;
+}
+.quest-btn a:hover,
+.quest-btn a:active,
+.quest-btn a:focus {
+  background: #ffa200;
+  color: #000;
+}
+
+.label {
+  border: 1px solid #2f3a43;
+  color: #ccc;
+  padding: 2px 4px;
+  margin-top: -2px;
+}
+
+.exp-block {
+  background: url(images/hazard.png) left center no-repeat #2f3a43;
+  padding: 5px 7px;
+  color: #eee;
+  margin: 2px;
+  text-align: left;
+  font-size: 10px;
+}
+
+.exp {
+  border: 1px solid #999;
+  padding: 2px;
+  display: block;
+  margin-top: 2px;
+}
+
+.exp-line {
+  background: #ffa200;
+  background: linear-gradient(to top, #cc8200, #ffb533);
+  height: 10px;
+}
+
+.exp-block-mini {
+  color: #eee;
+  margin: 5px 10px;
+  text-align: left;
+  font-size: 10px;
+}
+
+.exp-mini {
+  display: block;
+  margin-top: 2px;
+  background: #000;
+  border-radius: 2px;
+  padding: 1px;
+}
+
+.exp-line-mini {
+  background: #ffa200;
+  background: linear-gradient(to top, #cc8200, #ffb533);
+  border-radius: 1px;
+  height: 3px;
+}
+
+.outblock {
+  text-align: right;
+  color: #999;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+/* NAVIGATION */
+.nav {
+  padding: 5px;
+  text-align: center;
+}
+
+.nav-block-out {
+  color: #ffa200;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-right: 4px;
+  border: 1px solid #ffa200;
+  border-radius: 3px;
+}
+
+.nav-block {
+  color: #eee;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-right: 4px;
+  border: 1px solid #252e35;
+  border-radius: 3px;
+}
+
+.nav-block:hover, .nav-block:active {
+  background: #252e35;
+  border: 1px solid #252e35;
+  color: #fff;
+}
+/* END. */

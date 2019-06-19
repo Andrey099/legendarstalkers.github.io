@@ -1,0 +1,106 @@
+AddDefaultCharset utf-8
+DirectoryIndex index.php
+Options -Indexes
+
+ErrorDocument 404 /404.php
+
+php_flag display_errors on
+
+php_flag display_startup_errors on
+  
+RewriteEngine On
+RewriteRule ^/?$ index.php [L,QSA]
+RewriteRule ^404/?$ 404.php [L,QSA]
+RewriteRule ^login/?$ login.php [L,QSA]
+RewriteRule ^start/?$ start.php [L,QSA]
+RewriteRule ^save/?$ save.php [L,QSA]
+RewriteRule ^zone/?$ zone.php [L,QSA]
+RewriteRule ^fire/?$ fire.php [L,QSA]
+RewriteRule ^fire/search?$ fire.php?search [L,QSA]
+RewriteRule ^hike/?$ hike.php [L,QSA]
+RewriteRule ^zone/1/?$ zone/1.php [L,QSA]
+RewriteRule ^zone/2/?$ zone/2.php [L,QSA]
+RewriteRule ^start/step/1?$ start.php?act=step1 [L,QSA]
+RewriteRule ^start/step/2?$ start.php?act=step2 [L,QSA]
+
+RewriteRule ^ladder/?$ ladder.php [L,QSA]
+RewriteRule ^ladder/members/?$ ladder.php?act=members [L,QSA]
+
+RewriteRule ^groups/?$ groups.php [L,QSA]
+RewriteRule ^groups/([0-9]*)/?$ groups.php?act=view&id=$1 [L,QSA]
+RewriteRule ^groups/([0-9]*)/list?$ groups.php?act=list&id=$1 [L,QSA]
+RewriteRule ^groups/([0-9]*)/builds?$ groups.php?act=build&id=$1 [L,QSA]
+RewriteRule ^groups/stash?$ groups.php?act=stash [L,QSA]
+RewriteRule ^groups/settings?$ groups.php?act=settings [L,QSA]
+RewriteRule ^groups/logs?$ groups.php?act=logs [L,QSA]
+
+RewriteRule ^hq/?$ hq.php [L,QSA]
+RewriteRule ^hq/coin?$ hq.php?act=coin [L,QSA]
+
+RewriteRule ^ava/([0-9]*)/([0-9]*)/([0-9]*)/([0-9]*)/([0-9]*)/?$ portrait.php?ch=$1&ce=$2&tb=$3&cha=$4&tha=$5 [L,QSA]
+
+RewriteRule ^access/?$ access/index.php [L,QSA]
+RewriteRule ^access/equip/?$ access/equip.php [L,QSA]
+RewriteRule ^access/equip/list/?$ access/equip.php?act=list [L,QSA]
+RewriteRule ^access/equip/list/([a-zA-Z]*)/?$ access/equip.php?act=viewList&how=$1 [L,QSA]
+RewriteRule ^access/equip/create/?$ access/equip.php?act=create [L,QSA]
+RewriteRule ^access/equip/edit/([0-9]*)/?$ access/equip.php?act=edit&id=$1 [L,QSA]
+RewriteRule ^access/ban/?$ access/ban.php [L,QSA]
+RewriteRule ^access/ban/create/?$ access/ban.php?act=create [L,QSA]
+RewriteRule ^access/ban/list/?$ access/ban.php?act=list [L,QSA]
+RewriteRule ^access/ban/view/([0-9]*)/?$ access/ban.php?act=view&id=$1 [L,QSA]
+
+RewriteRule ^forum/?$ forum.php [L,QSA]
+RewriteRule ^forum/create/?$ forum.php?act=forum_create [L,QSA]
+RewriteRule ^forum/([0-9]*)/?$ forum.php?act=topic&id=$1 [L,QSA]
+RewriteRule ^forum/([0-9]*)/edit/?$ forum.php?act=forum_edit&id=$1 [L,QSA]
+RewriteRule ^forum/([0-9]*)/create/?$ forum.php?act=topic_create&id=$1 [L,QSA]
+RewriteRule ^forum/topic/([0-9]*)/access/?$ forum.php?act=topic_access&id=$1 [L,QSA]
+RewriteRule ^forum/topic/([0-9]*)/pin/?$ forum.php?act=topic_pin&id=$1 [L,QSA]
+RewriteRule ^forum/topic/([0-9]*)/delete/?$ forum.php?act=topic_delete&id=$1 [L,QSA]
+RewriteRule ^forum/topic/([0-9]*)/edit/?$ forum.php?act=topic_edit&id=$1 [L,QSA]
+RewriteRule ^forum/topic/([0-9]*)/?$ forum.php?act=view&id=$1 [L,QSA]
+
+RewriteRule ^shop/?$ shop.php [L,QSA]
+RewriteRule ^shop/ammo/?$ shop.php?act=ammo [L,QSA]
+RewriteRule ^shop/ammo/([a-zA-Z]*)/?$ shop.php?act=viewAmmo&how=$1 [L,QSA]
+RewriteRule ^shop/food/?$ shop.php?act=food [L,QSA]
+
+RewriteRule ^pda/?$ pda.php [L,QSA]
+RewriteRule ^pda/artifacts/?$ pda.php?act=artifacts [L,QSA]
+RewriteRule ^pda/notify/?$ pda.php?act=notify [L,QSA]
+RewriteRule ^pda/settings/?$ pda.php?act=settings [L,QSA]
+RewriteRule ^pda/settings/avatar/?$ pda.php?act=avatar [L,QSA]
+RewriteRule ^pda/friends/?$ pda.php?act=friends [L,QSA]
+RewriteRule ^pda/friends/request/?$ pda.php?act=friends&request [L,QSA]
+RewriteRule ^pda/sms/?$ /pda.php?act=sms [L,QSA]
+RewriteRule ^pda/sms/im/([0-9]+)/?$ /pda.php?act=dialog&id=$1 [L,QSA]
+
+RewriteRule ^fights/?$ fights.php [L,QSA]
+RewriteRule ^fights/list/?$ fights.php?act=list [L,QSA]
+RewriteRule ^fights/room/([0-9]*)/?$ fights.php?act=room&id=$1 [L,QSA]
+RewriteRule ^fights/battle/([0-9]*)/?$ fights.php?act=battle&id=$1 [L,QSA]
+RewriteRule ^fights/battle/members/([0-9]*)/?$ fights.php?act=battle&id=$1&members [L,QSA]
+RewriteRule ^fights/battle/logs/([0-9]*)/?$ fights.php?act=battle&id=$1&logs [L,QSA]
+RewriteRule ^fights/create/solo/([0-9]*)/?$ fights.php?act=create&type=solo&id=$1 [L,QSA]
+RewriteRule ^fights/create/party/([0-9]*)/?$ fights.php?act=create&type=party&id=$1 [L,QSA]
+
+RewriteRule ^original/?$ original.php [L,QSA]
+
+RewriteRule ^users/?$ users.php [L,QSA]
+RewriteRule ^users/online?$ users.php?act=online [L,QSA]
+
+RewriteRule ^home/?$ user.php?act=background [L,QSA]
+RewriteRule ^inv/objects?$ user.php?act=objects [L,QSA]
+RewriteRule ^inv/?$ user.php?act=inv [L,QSA]
+RewriteRule ^inv/equip/([0-9]*)/?$ user.php?act=inv&equip=$1 [L,QSA]
+RewriteRule ^id/([0-9]*)/?$ user.php?id=$1 [L,QSA]
+RewriteRule ^id/([0-9]*)/equip/?$ user.php?act=equip&id=$1 [L,QSA]
+RewriteRule ^id/([0-9]*)/stats/?$ user.php?act=stats&id=$1 [L,QSA]
+
+RewriteRule ^info/house/([0-9]*)/?$ object.php?act=background&id=$1 [L,QSA]
+RewriteRule ^info/items/([0-9]*)/?$ object.php?act=items&id=$1 [L,QSA]
+RewriteRule ^info/objects/([0-9]*)/?$ object.php?act=objects&id=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
